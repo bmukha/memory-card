@@ -1,3 +1,5 @@
-const Scoreboard = () => <div>This is scoreboard</div>
+import "../styles/Scoreboard.css";
 
-export default Scoreboard
+const Scoreboard = () => <div className="scoreboard">This is scoreboard</div>;
+
+export default Scoreboard;

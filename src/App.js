@@ -2,22 +2,11 @@ import { useState, useEffect } from "react";
 import Header from "./components/Header";
 import Scoreboard from "./components/Scoreboard";
 import "./styles/App.css";
-import randomHex from "random-hex";
+import get10RandomColors from "./components/Colors";
+import ColorsGrid from "./components/ColorsGrid";
 
 export const App = () => {
-  const fillArrayWithRandomHexValues = () => {
-    const arr = [];
-    for (let i = 0; i < 10; i++) {
-      arr.push(randomHex.generate());
-    }
-    return arr;
-  };
-
-  const [arrayOfColours, setArrayOfColours] = useState(
-    fillArrayWithRandomHexValues()
-  );
-
-  // prepareColoredCards = 
+  const [arrayOfColours, setArrayOfColours] = useState(get10RandomColors());
 
   useEffect(() => {
     console.log(arrayOfColours);
@@ -27,7 +16,7 @@ export const App = () => {
     <main>
       <Header />
       <Scoreboard />
-      I'm working
+      <ColorsGrid arrayOfColours={arrayOfColours}/>
     </main>
   );
 };

@@ -1,11 +1,11 @@
 main {
   width: 100vw;
   height: 100vh;
-  background-color: bisque;
   display: grid;
-  grid-template-rows: 10% 15% 1fr 1fr;
-  grid-template-columns: repeat(5, 1fr);
+  grid-template-rows: 1fr 1fr 8fr;
+  grid-template-columns: 1fr;
   grid-template-areas:
-    "header header header header header"
-    "scoreboard scoreboard scoreboard scoreboard scoreboard";
+    "header"
+    "scoreboard"
+    "colors";
 }

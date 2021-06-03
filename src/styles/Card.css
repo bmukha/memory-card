@@ -1,0 +1,27 @@
+.card {
+  width: 80%;
+  height: 80%;
+  max-width: 200px;
+  border-radius: 20px;
+  border: 1px solid black;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 5fr 1fr;
+  grid-template-areas:
+    "color"
+    "name";
+}
+
+.card div {
+  width: 100%;
+  height: 100%;
+  grid-area: color;
+}
+
+.card h2 {
+  width: 100%;
+  height: 100%;
+  grid-area: name;
+  text-align: center;
+  vertical-align: middle;
+}

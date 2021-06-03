@@ -1,5 +1,6 @@
 import React from "react";
 import "../styles/Card.css";
+import invert from "invert-color"
 
 const Card = (props) => {
   console.log("Received props: ", props);
@@ -11,7 +12,8 @@ const Card = (props) => {
         backgroundColor: `${props.colors.hex}`,
       }}
     >
-      <p>{props.colors.name}</p>
+      <p style={{color: `${invert(props.colors.hex)}`}}>
+      {props.colors.name}</p>
     </div>
   );
 };

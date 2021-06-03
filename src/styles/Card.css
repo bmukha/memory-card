@@ -30,4 +30,9 @@
     width: 100px;
     height: 150px;
   }
+
+  .card p {
+    margin-bottom: 10px;
+    font-size: 2em;
+  }
 }

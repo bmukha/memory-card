@@ -1,4 +1,12 @@
+@font-face {
+  font-family: youthTouch;
+  src: url("../fonts/YouthTouchDemoRegular-4VwY.ttf");
+}
+
 header {
   grid-area: header;
-  background-color: aqua;
+  font-size: 4em;
+  font-family: youthTouch;
+  text-align: center;
+  margin: auto;
 }

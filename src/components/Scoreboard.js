@@ -1,5 +1,10 @@
 import "../styles/Scoreboard.css";
 
-const Scoreboard = () => <div className="scoreboard">This is scoreboard</div>;
+const Scoreboard = (props) => (
+  <div className="scoreboard">
+    <div>Current score: {props.currentScore}</div>
+    <div>High score: {props.highScore}</div>
+  </div>
+);
 
 export default Scoreboard;

@@ -12,11 +12,15 @@ export const App = () => {
     console.log(arrayOfColours);
   });
 
+  const handleClick = (event) => {
+    console.log(event.target.firstChild.innerText);
+  };
+
   return (
     <main>
       <Header />
       <Scoreboard />
-      <ColorsGrid arrayOfColours={arrayOfColours}/>
+      <ColorsGrid handleClick={handleClick} arrayOfColours={arrayOfColours} />
     </main>
   );
 };

@@ -1,4 +1,26 @@
+@font-face {
+  font-family: digital;
+  src: url("../fonts/digital-7\ \(italic\).ttf");
+}
+
 .scoreboard {
   grid-area: scoreboard;
-  background-color: aliceblue;
+  font-family: digital;
+  font-size: 5em;
+  display: grid;
+  grid-template-rows: 1fr;
+  grid-template-columns: 1fr 1fr;
+}
+
+.scoreboard div {
+  display: flex;
+  justify-content: center;
+  place-items: center;
+}
+
+@media screen and (max-width: 750px) {
+  .scoreboard {
+    grid-template-rows: 1fr 1fr;
+    grid-template-columns: 1fr;
+  }
 }

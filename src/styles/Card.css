@@ -1,19 +1,28 @@
+@font-face {
+  font-family: geraldine;
+  src: url("../fonts/GeraldinePersonalUseItalic-PK12m.ttf");
+}
+
 .card {
   width: 200px;
   height: 300px;
   max-width: 200px;
-  /* border: 1px solid black; */
-  margin: 10px;
-  display: grid;
-  grid-template-columns: 1fr;
-  grid-template-rows: 5fr 1fr;
-  grid-template-areas:
-    "color"
-    "name";
+  margin: 20px;
+  border-radius: 20px;
+  border: 1px solid black;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
 }
 
 .card:hover {
   cursor: pointer;
+}
+
+.card p {
+  margin-bottom: 20px;
+  font-family: geraldine;
+  font-size: 3em;
 }
 
 @media screen and (max-width: 750px) {
@@ -21,22 +30,4 @@
     width: 100px;
     height: 150px;
   }
-}
-
-.card div {
-  border-radius: 20px;
-  width: 100%;
-  height: 100%;
-  grid-area: color;
-}
-
-.card h2 {
-  display: block;
-  width: 100%;
-  height: 100%;
-  grid-area: name;
-  display: flex;
-  justify-content: center;
-  place-items: center;
-  border-radius: 20px;
 }

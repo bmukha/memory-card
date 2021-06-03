@@ -12,12 +12,12 @@ export const App = () => {
   const [highScore, setHighScore] = useState(0);
   const [usedValues, setUsedValues] = useState([]);
   const [gameOver, setGameOver] = useState(false);
+  const [result, setResult] = useState("");
 
   const handleClick = (event) => {
     const newColor = event.target.firstChild.innerText;
-    console.log(newColor);
-    if (usedValues.includes(newColor)) {
-      console.log("used!");
+    if (usedValues.includes(newColor) || usedValues.length === 15) {
+      setResult(usedValues.length === 15 ? "won" : "lost");
       if (currentScore > highScore) {
         setHighScore(currentScore);
         setGameOver(true);
@@ -33,16 +33,18 @@ export const App = () => {
     setUsedValues([]);
     setCurrentScore(0);
     setGameOver(false);
+    setResult("");
   };
 
   const conditionalReturn = gameOver ? (
     <div>
-      <p>You lost. Try again!</p>
+      <p>You {result}. Try again!</p>
       <TryAgainButton handleTryAgain={handleTryAgain} />
     </div>
   ) : (
     <ColorsGrid handleClick={handleClick} arrayOfColours={arrayOfColours} />
   );
+
   return (
     <main>
       <Header />

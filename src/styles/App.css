@@ -1,12 +1,35 @@
+@font-face {
+  font-family: youthTouch;
+  src: url("../fonts/YouthTouchDemoRegular-4VwY.ttf");
+}
+
 main {
   width: 100vw;
   height: 100vh;
   display: grid;
-  justify-content: center;  
+  justify-content: center;
   grid-template-rows: 1fr 1fr 8fr;
   grid-template-columns: 1fr;
   grid-template-areas:
     "header"
     "scoreboard"
     "colors";
+}
+
+.result {
+  display: flex;
+  justify-content: center;
+  place-items: center;
+  flex-direction: column;
+}
+
+.result p {
+  font-size: 10em;
+  font-family: youthTouch;
+}
+
+.result button {
+  margin: 2em;
+  font-size: 3em;
+  border-radius: 10px;
 }

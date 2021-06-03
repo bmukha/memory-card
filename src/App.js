@@ -20,8 +20,8 @@ export const App = () => {
       setResult(usedValues.length === 15 ? "won" : "lost");
       if (currentScore > highScore) {
         setHighScore(currentScore);
-        setGameOver(true);
       }
+      setGameOver(true);
     } else {
       setUsedValues((usedValues) => [...usedValues, newColor]);
       setCurrentScore((currentScore) => currentScore + 1);
@@ -37,7 +37,7 @@ export const App = () => {
   };
 
   const conditionalReturn = gameOver ? (
-    <div>
+    <div className="result">
       <p>You {result}. Try again!</p>
       <TryAgainButton handleTryAgain={handleTryAgain} />
     </div>

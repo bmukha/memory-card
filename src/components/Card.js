@@ -10,6 +10,7 @@ const Card = (props) => {
       style={{
         boxShadow: `0 0 7px 5px ${props.colors.hex}`,
         backgroundColor: `${props.colors.hex}`,
+        border: `3px solid ${invert(props.colors.hex)}`
       }}
     >
       <p style={{ color: `${invert(props.colors.hex)}` }}>

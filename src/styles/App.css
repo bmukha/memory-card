@@ -32,6 +32,8 @@ main {
   background-color: #4caf50; /* Green */
   border: none;
   border-radius: 15px;
+  box-shadow: 0 0 7px 5px #4caf50;
+  border: 3px solid #b350af;
   color: white;
   margin: 2em;
   padding: 10px;
@@ -40,4 +42,8 @@ main {
   display: inline-block;
   font-size: 3em;
   font-family: youthTouch;
+}
+
+.result button:hover {
+  cursor: pointer;
 }

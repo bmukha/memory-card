@@ -3,5 +3,12 @@
   height: 95%;
   margin: 0 auto;
   display: grid;
-  grid-template-columns: repeat(5, minmax(220px, 1fr));
+  grid-template-columns: repeat(5, minmax(100px, 1fr));
+}
+
+@media screen and (max-width: 1075px) {
+  .colors-grid {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(5, 1fr);
+  }
 }

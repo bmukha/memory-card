@@ -18,7 +18,7 @@
   place-items: center;
 }
 
-@media screen and (max-width: 750px) {
+@media screen and (max-width: 1075px) {
   .scoreboard {
     grid-template-rows: 1fr 1fr;
     grid-template-columns: 1fr;

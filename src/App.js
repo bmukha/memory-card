@@ -16,8 +16,8 @@ export const App = () => {
 
   const handleClick = (event) => {
     const newColor = event.target.firstChild.innerText;
-    if (usedValues.includes(newColor) || usedValues.length === 15) {
-      setResult(usedValues.length === 15 ? "won" : "lost");
+    if (usedValues.includes(newColor) || usedValues.length === 3) {
+      setResult(usedValues.length === 3 ? "won" : "lost");
       if (currentScore > highScore) {
         setHighScore(currentScore);
       }

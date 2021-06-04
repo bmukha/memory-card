@@ -37,9 +37,9 @@ export const App = () => {
   };
 
   const conditionalReturn =
-    gameOver || currentScore === 5 ? (
+    gameOver || currentScore === 15 ? (
       <div className="result">
-        <p>You {currentScore === 5 ? "won" : "lost"}. Try again!</p>
+        <p>You {currentScore === 15 ? "won" : "lost"}. Try again!</p>
         <TryAgainButton handleTryAgain={handleTryAgain} />
       </div>
     ) : (

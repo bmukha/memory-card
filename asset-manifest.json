@@ -1,0 +1,23 @@
+{
+  "files": {
+    "main.css": "/memory-card/static/css/main.6c8e90ae.chunk.css",
+    "main.js": "/memory-card/static/js/main.c817cbf7.chunk.js",
+    "main.js.map": "/memory-card/static/js/main.c817cbf7.chunk.js.map",
+    "runtime-main.js": "/memory-card/static/js/runtime-main.5e1d5d79.js",
+    "runtime-main.js.map": "/memory-card/static/js/runtime-main.5e1d5d79.js.map",
+    "static/js/2.bf672d98.chunk.js": "/memory-card/static/js/2.bf672d98.chunk.js",
+    "static/js/2.bf672d98.chunk.js.map": "/memory-card/static/js/2.bf672d98.chunk.js.map",
+    "index.html": "/memory-card/index.html",
+    "static/css/main.6c8e90ae.chunk.css.map": "/memory-card/static/css/main.6c8e90ae.chunk.css.map",
+    "static/js/2.bf672d98.chunk.js.LICENSE.txt": "/memory-card/static/js/2.bf672d98.chunk.js.LICENSE.txt",
+    "static/media/Card.css": "/memory-card/static/media/GeraldinePersonalUseItalic-PK12m.07b14676.ttf",
+    "static/media/App.css": "/memory-card/static/media/YouthTouchDemoRegular-4VwY.3df63a6f.ttf",
+    "static/media/Scoreboard.css": "/memory-card/static/media/digital-7 (italic).3864737f.ttf"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.5e1d5d79.js",
+    "static/js/2.bf672d98.chunk.js",
+    "static/css/main.6c8e90ae.chunk.css",
+    "static/js/main.c817cbf7.chunk.js"
+  ]
+}

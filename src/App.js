@@ -12,19 +12,20 @@ export const App = () => {
   const [highScore, setHighScore] = useState(0);
   const [usedValues, setUsedValues] = useState([]);
   const [gameOver, setGameOver] = useState(false);
-  const [result, setResult] = useState("");
+
+  console.log("App component rendered...");
+
+  if (currentScore > highScore) {
+    setHighScore(currentScore);
+  }
 
   const handleClick = (event) => {
     const newColor = event.target.firstChild.innerText;
-    if (usedValues.includes(newColor) || usedValues.length === 3) {
-      setResult(usedValues.length === 3 ? "won" : "lost");
-      if (currentScore > highScore) {
-        setHighScore(currentScore);
-      }
+    if (usedValues.includes(newColor)) {
       setGameOver(true);
     } else {
-      setUsedValues((usedValues) => [...usedValues, newColor]);
       setCurrentScore((currentScore) => currentScore + 1);
+      setUsedValues((usedValues) => [...usedValues, newColor]);
       setArrayOfColours(get10RandomColors());
     }
   };
@@ -33,17 +34,17 @@ export const App = () => {
     setUsedValues([]);
     setCurrentScore(0);
     setGameOver(false);
-    setResult("");
   };
 
-  const conditionalReturn = gameOver ? (
-    <div className="result">
-      <p>You {result}. Try again!</p>
-      <TryAgainButton handleTryAgain={handleTryAgain} />
-    </div>
-  ) : (
-    <ColorsGrid handleClick={handleClick} arrayOfColours={arrayOfColours} />
-  );
+  const conditionalReturn =
+    gameOver || currentScore === 5 ? (
+      <div className="result">
+        <p>You {currentScore === 5 ? "won" : "lost"}. Try again!</p>
+        <TryAgainButton handleTryAgain={handleTryAgain} />
+      </div>
+    ) : (
+      <ColorsGrid handleClick={handleClick} arrayOfColours={arrayOfColours} />
+    );
 
   return (
     <main>

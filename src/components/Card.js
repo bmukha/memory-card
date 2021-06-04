@@ -3,6 +3,9 @@ import "../styles/Card.css";
 import invert from "invert-color";
 
 const Card = (props) => {
+
+  // console.log("Card component rendered...");
+
   return (
     <div
       onClick={props.handleClick}
